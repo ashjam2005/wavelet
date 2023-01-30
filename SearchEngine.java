@@ -5,7 +5,7 @@ class Handler implements URLHandler {
     // The one bit of state on the server: a number that will be manipulated by
     // various requests.
     int num = 0;
-    ArrayList<String> list = new ArrayList<String>;
+    Arraylist<String> List;
     StringBuilder builder = new StringBuilder();
     int num2 = 0;
 
@@ -52,6 +52,12 @@ class Handler implements URLHandler {
     }
 }
 */
+    
+    public Handler()
+    {
+        list = new ArrayList<String>;
+    }
+    
     public String handleRequest(URI url)
     {
         if (url.getPath.equals("/add-message")
