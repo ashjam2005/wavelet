@@ -73,7 +73,7 @@ Another feature to note is that this program keeps note of all the strings print
                                   
 * Below is an image which shows the message displayed in terminal due to incorrect implementation of reverseArray method
                                   
-![Image](Exception.org)                              
+![Image](Exception.jpg)                              
 
   
 
