@@ -71,7 +71,7 @@ class Handler implements URLHandler {
                 for (int i=1;i<list.length;i++)
                 {
                     builder.append("\n");
-                    builder.append(parameters[i])
+                    builder.append(parameters[i]);
                 }                
                 return String.format(builder.toString());
             }
