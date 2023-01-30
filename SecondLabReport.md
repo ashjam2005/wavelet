@@ -15,14 +15,14 @@ Another feature to note is that this program keeps note of all the strings print
   * As you can see from above, I had to try to check whether path of URL was valid and when affirmed I had to check whether the query had an "s" to ensure
     printing of word on the website
 
- ## Part 2
- ### Exploring JUnit
+## Part 2
+### Exploring JUnit
   
-  * In this part I shall be talking about the JUnit class
+ * In this part I shall be talking about the JUnit class
   
-  * JUnit is responsible for ensuring unit testing in Java programs which is very beneficial to ensuring right running of methods within a program
+ * JUnit is responsible for ensuring unit testing in Java programs which is very beneficial to ensuring right running of methods within a program
   
-  * We will be talking about ArrayReverseMethod which we(including our group) had to fix
+ * We will be talking about ArrayReverseMethod which we(including our group) had to fix
   
   ```
 # Buggy code block
@@ -42,7 +42,7 @@ Another feature to note is that this program keeps note of all the strings print
     int[] input = {3};
     ArrayExamples.reverseInPlace(input);
     assertArrayEquals(new int[]{3},input};                              
-                                                                                                    
+ }                                                                                                   
 ```                               
                                   
 ```
@@ -51,7 +51,7 @@ Another feature to note is that this program keeps note of all the strings print
  {
     int[] input = {12,23,34,45};
     ArrayExamples.reverseInPlace(input);
-    assertArrayEquals(new int[]{45,34,23,12},input};                                                                                                                                  
+    assertArrayEquals(new int[]{45,34,23,12},input};                                                                                                                    }              
 ``` 
     
  ```
@@ -60,6 +60,34 @@ Another feature to note is that this program keeps note of all the strings print
  {
     int[] input = {12,23,34};
     ArrayExamples.reverseInPlace(input);
-    assertArrayEquals(new int[]{34,23,12},input};                                                                                                                                  
+    assertArrayEquals(new int[]{34,23,12},input};                                                                                                                      }            
 ```
+  
+!Image[Exception.jpg]
+                                  
+```
+# Amended code block
+static void reverseInPlace(int[] arr) {
+    int counter = 0;       
+    for(int i = 0; i < arr.length/2; i += 1) 
+    {
+      int temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
+    }
+    
+  }
+```                                  
+* The original code had end counter variable at arr.length instead of arr.length/2
+* The original code also forgot to use a temporary variable to store the value of original variable at a certain index
+* To expose this, I used multivariable arrays with both odd and even lengths
+* I amended the following stuff mentioned above and my code worked
+                                  
+ ## Part 3
+### Reflection about lab 2 and lab 3                                
+                                  
+ * In lab 2, I did not have much of an idea about different parts of the URL. However, after doing lab 2, I understood what is a path, query and other parts of URL
+  
+ * In lab 3, I was able to use JUnit tests with much more profiency and I think I can do a better job at committing and pushing code to my GitHub repository 
+                                  
                                   
