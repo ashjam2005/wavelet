@@ -34,38 +34,40 @@ Another feature to note is that this program keeps note of all the strings print
 ```
  
    * Below are the JUnit Tests
-                                  
-    ```
-# Flawed JUnit which does not show the flaw
+      
+ ```
+# code block
  public void testAnotherTypeOfReverse()
  {
     int[] input = {3};
     ArrayExamples.reverseInPlace(input);
     assertArrayEquals(new int[]{3},input};                              
- }                                                                                                   
-```                               
-                                  
+ }  
 ```
-# JUnit which show the flaw
- public void testAnotherTypeOfReverse()
+    ```
+# code block
+public void testAnotherTypeOfReverse()
  {
     int[] input = {12,23,34,45};
     ArrayExamples.reverseInPlace(input);
-    assertArrayEquals(new int[]{45,34,23,12},input};                                                                                                                    }              
+    assertArrayEquals(new int[]{45,34,23,12},input};                                                                                                                    }
 ``` 
-    
- ```
-# Another JUnit which show the flaw
- public void testAnotherTypeOfReverse()
+                                  
+  ```
+# code block
+public void testAnotherTypeOfReverse()
  {
-    int[] input = {12,23,34};
+    int[] input = {12,23,34,45};
     ArrayExamples.reverseInPlace(input);
-    assertArrayEquals(new int[]{34,23,12},input};                                                                                                                      }            
+    assertArrayEquals(new int[]{45,34,23,12},input};                                                                                                                    }  
 ```
+                                  
+          
+
   
 !Image[Exception.jpg]
                                   
-```
+
 # Amended code block
 static void reverseInPlace(int[] arr) {
     int counter = 0;       
