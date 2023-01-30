@@ -50,14 +50,25 @@ Another feature to note is that this program keeps note of all the strings print
 * Below two tests are tests which do show the flaws in the program     
                                   
  ```
-# code block
+# First JUnit Test
 @Test
-    public void testAnotherTypeOfReverse()
+    public void testTypeOfReverse()
     {
         int[] input = {12,23,34,45};
         Array.reverseInPlace(input);
         assertArrayEquals(new int[]{45,34,23,12},input);
-    };
+    }                               
+```
+                                  
+  ```
+# Second JUnit Test
+@Test
+    public void testTypeOfReverse()
+    {
+        int[] input = {12,23,34};
+        Array.reverseInPlace(input);
+        assertArrayEquals(new int[]{34,23,12},input);
+    } 
 ```
                                   
           
