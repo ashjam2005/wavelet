@@ -67,7 +67,7 @@ public void testAnotherTypeOfReverse()
   
 !Image[Exception.jpg]
                                   
-
+ ```
 # Amended code block
 static void reverseInPlace(int[] arr) {
     int counter = 0;       
