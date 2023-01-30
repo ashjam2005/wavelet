@@ -49,42 +49,23 @@ Another feature to note is that this program keeps note of all the strings print
                                   
 * Below two tests are tests which do show the flaws in the program     
                                   
-    ```
+ ```
 # code block
-public void testAnotherTypeOfReverse()
- {
-    int[] input = {12,23,34,45};
-    ArrayExamples.reverseInPlace(input);
-    assertArrayEquals(new int[]{45,34,23,12},input};                                                                                                                    }
-``` 
-                                  
-  ```
-# code block
-public void testAnotherTypeOfReverse()
- {
-    int[] input = {12,23,34,45};
-    ArrayExamples.reverseInPlace(input);
-    assertArrayEquals(new int[]{45,34,23,12},input};                                                                                                                    }  
+@Test
+    public void testAnotherTypeOfReverse()
+    {
+        int[] input = {12,23,34,45};
+        Array.reverseInPlace(input);
+        assertArrayEquals(new int[]{45,34,23,12},input);
+    };
 ```
                                   
           
 
   
-!Image[Exception.jpg]
+
                                   
- ```
-# Amended code block
-static void reverseInPlace(int[] arr) {
-    int counter = 0;       
-    for(int i = 0; i < arr.length/2; i += 1) 
-    {
-      int temp = arr[i];
-      arr[i] = arr[arr.length - i - 1];
-      arr[arr.length - i - 1] = temp;
-    }
-    
-  }
-```                                  
+                                  
 * The original code had end counter variable at arr.length instead of arr.length/2
 * The original code also forgot to use a temporary variable to store the value of original variable at a certain index
 * To expose this, I used multivariable arrays with both odd and even lengths
