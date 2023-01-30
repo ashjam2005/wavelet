@@ -34,7 +34,9 @@ Another feature to note is that this program keeps note of all the strings print
 ```
  
    * Below are the JUnit Tests
-      
+ 
+* Below is the first JUnit test which does not show the flaws in the program
+                                  
  ```
 # code block
  public void testAnotherTypeOfReverse()
@@ -44,6 +46,9 @@ Another feature to note is that this program keeps note of all the strings print
     assertArrayEquals(new int[]{3},input};                              
  }  
 ```
+                                  
+* Below two tests are tests which do show the flaws in the program     
+                                  
     ```
 # code block
 public void testAnotherTypeOfReverse()
